@@ -33,9 +33,11 @@ from posts import views as posts_views
 #    return HttpResponse('<p><b>Hello World</b></>')
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('hello-world/', local_views.hello_world),
     path('hi/', local_views.hi),
     path('sort/', local_views.sort_integers),
     path('hi2/<str:name>/<int:age>/',local_views.say_hi),
     path('posts/',posts_views.list_posts),
+    path('posts2/',posts_views.list2_posts),
 ]
